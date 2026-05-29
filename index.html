@@ -6,11 +6,11 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <meta name="title" content="AC-VLA">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <meta name="description" content="An plug-and-play VLA training framework">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <meta name="keywords" content="Vision-Language-Action models, Action Composition, Robots">
   <!-- TODO: List all authors -->
   <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
   <meta name="robots" content="index, follow">
@@ -76,10 +76,7 @@
   <!-- TODO: Replace with your paper title and authors -->
   <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
   
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
@@ -241,7 +238,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">AC-VLA: Robust Out-of-Distribution Action Execution via Compositional Learning</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
@@ -341,8 +338,26 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+            Vision-Language-Action (VLA) models excel at end-to-end robotic manipulation but struggle with out-of-distribution
+            (OOD)
+            generalization when familiar sub-tasks are recombined in unseen configurations. We identify two mutually reinforcing
+            failure modes: <em>trajectory overfitting</em>, where models overfit to holistic trajectory patterns rather than
+            compositional sub-skill semantics; and <em>perceptual shortcut</em>, where action tokens over-rely on wrist-view
+            textures
+            at the expense of global spatial grounding. To address both, we introduce <strong>AC-VLA</strong>, a plug-and-play
+            Action
+            Compositional learning framework comprising two architecture-agnostic components: <strong>(i)</strong> a compositional
+            learning
+            module that uses an LLM-driven instruction decomposer and a proprioceptive trajectory aligner to generate dense
+            sub-task
+            supervision, followed by mixed training on complete demonstrations and decomposed data to endow the model with
+            compositional generalization; and <strong>(ii)</strong> a state-conditioned asymmetric masking strategy that
+            suppresses
+            wrist-view inputs during closed-gripper phases, enforcing global semantic grounding. All components are architectural
+            modification-free and directly integrable into any VLA backbone. Instantiated on π<sub>0.5</sub> and evaluated on
+            LIBERO and
+            LIBERO-OOD benchmarks, AC-VLA achieves a ∼28% absolute improvement on compositional OOD tasks while maintaining
+            near-perfect in-distribution performance. The source code will be made publicly available.      </p>
         </div>
       </div>
     </div>
